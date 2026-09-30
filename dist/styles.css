@@ -1,10 +1,10 @@
 :root {
   color-scheme: dark;
   --ink: #2d2634;
-  --page-ink: #f3efe6;
-  --page-muted: #a9b5c6;
-  --paper: #182130;
-  --dot: #2b3749;
+  --page-ink: #ffffff;
+  --page-muted: #a3a3a3;
+  --paper: #0a0a0a;
+  --dot: #232323;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-synthesis: none;
 }
@@ -80,7 +80,7 @@ h1 {
 .social-links a,
 footer a {
   text-decoration-thickness: 1px;
-  text-decoration-color: #6f7c90;
+  text-decoration-color: #6b6b6b;
   text-underline-offset: 4px;
 }
 .social-links a:hover,
