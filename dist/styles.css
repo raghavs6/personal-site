@@ -2,7 +2,7 @@
   color-scheme: dark;
   --ink: #2d2634;
   --page-ink: #ffffff;
-  --page-muted: #a3a3a3;
+  --page-muted: #ffffff;
   --paper: #0a0a0a;
   --dot: #232323;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -64,7 +64,7 @@ h1 {
   font-weight: 680;
 }
 .name-dot {
-  color: #e9cf72;
+  color: #ffffff;
 }
 .intro p {
   max-width: 49ch;
@@ -80,7 +80,7 @@ h1 {
 .social-links a,
 footer a {
   text-decoration-thickness: 1px;
-  text-decoration-color: #6b6b6b;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
   text-underline-offset: 4px;
 }
 .social-links a:hover,
@@ -98,54 +98,12 @@ footer a:hover {
   letter-spacing: 0.045em;
   font-weight: 750;
 }
-.focus-card,
-.project-card,
-.experience-card,
-.contact-card {
-  overflow: hidden;
-  color: var(--ink);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 16px;
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.35) inset,
-    0 14px 32px rgba(8, 5, 14, 0.45),
-    0 3px 8px rgba(8, 5, 14, 0.3);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-.focus-card:hover,
-.project-card:hover,
-.experience-card:hover,
-.contact-card:hover {
-  transform: translateY(-3px);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.35) inset,
-    0 20px 40px rgba(8, 5, 14, 0.55),
-    0 4px 10px rgba(8, 5, 14, 0.35);
-}
-.color-sun {
-  background: #f5e7a8;
-}
-.color-plum {
-  background: #ddd3f1;
-}
-.color-sage {
-  background: #cfe6dc;
-}
-.color-clay {
-  background: #f6d3ba;
-}
 
-.focus-card {
-  padding: 1.4rem 1.5rem 1.5rem;
-}
 .focus-spark {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1.9rem;
   line-height: 1;
-  color: #5f4a22;
 }
 .focus-card p {
   max-width: 37ch;
@@ -163,9 +121,9 @@ footer a:hover {
   gap: 0.4rem;
 }
 .focus-tags span {
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 999px;
   padding: 0.25rem 0.65rem;
-  background: rgba(255, 255, 255, 0.55);
   font-size: 0.77rem;
   font-weight: 600;
 }
@@ -175,15 +133,11 @@ footer a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 0;
   text-decoration: none;
-  transition: background-color 0.15s ease;
 }
 .project-row + .project-row {
-  border-top: 1px solid rgba(69, 51, 93, 0.14);
-}
-.project-row:hover {
-  background: rgba(255, 255, 255, 0.35);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 .project-copy {
   display: flex;
@@ -197,12 +151,10 @@ footer a:hover {
 }
 .project-copy small {
   margin: 0.2rem 0 0.4rem;
-  color: #3b2e53;
   font-size: 0.82rem;
   font-weight: 600;
 }
 .project-copy > span {
-  color: #3b2e53;
   line-height: 1.45;
 }
 .arrow {
@@ -216,10 +168,14 @@ footer a:hover {
 }
 
 .experience-item {
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 0;
+}
+.project-row:first-child,
+.experience-item:first-child {
+  padding-top: 0;
 }
 .experience-item + .experience-item {
-  border-top: 1px solid rgba(31, 74, 60, 0.14);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 .experience-head {
   display: flex;
@@ -235,26 +191,20 @@ footer a:hover {
   font-weight: 700;
 }
 .experience-head time {
-  color: #2f5446;
   font-size: 0.82rem;
   font-weight: 600;
   white-space: nowrap;
 }
 .experience-role {
   margin: 0.2rem 0 0.4rem;
-  color: #2f5446;
   font-size: 0.82rem;
   font-weight: 600;
 }
 .experience-summary {
   margin: 0;
-  color: #243f35;
   line-height: 1.45;
 }
 
-.contact-card {
-  padding: 1.4rem 1.5rem 1.5rem;
-}
 .contact-card p {
   margin: 0 0 0.5rem;
   font-size: 1.05rem;
@@ -293,30 +243,12 @@ footer {
   .project-row {
     gap: 0.75rem;
   }
-  .project-row,
-  .experience-item,
-  .focus-card,
-  .contact-card {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-  }
 }
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .project-row,
-  .arrow,
-  .focus-card,
-  .project-card,
-  .experience-card,
-  .contact-card {
+  .arrow {
     transition: none;
-  }
-  .focus-card:hover,
-  .project-card:hover,
-  .experience-card:hover,
-  .contact-card:hover {
-    transform: none;
   }
 }
