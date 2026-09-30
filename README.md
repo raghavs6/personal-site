@@ -2,6 +2,8 @@
 
 A single-page portfolio for [Raghav Senthilkumar](https://github.com/raghavs6), built with plain HTML and CSS.
 
+[View the live site](https://raghav-senthilkumar-portfolio.raghav-senthil978493.chatgpt.site).
+
 ## Preview locally
 
 ```sh
