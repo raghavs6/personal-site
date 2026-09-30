@@ -16,6 +16,6 @@ Visit `http://localhost:4173/`.
 
 - `dist/index.html` contains the page and project content.
 - `dist/styles.css` contains the responsive styles.
-- `.openai/hosting.json` configures static hosting through Sites.
+- `.github/workflows/pages.yml` deploys `dist/` to GitHub Pages on every push to `main`.
 
 Project descriptions are based on their linked public repositories. The page uses no framework, client-side scripts, or external assets.
