@@ -1,9 +1,10 @@
 :root {
-  color-scheme: light;
+  color-scheme: dark;
   --ink: #2d2634;
-  --muted: #625d62;
-  --paper: #f4f2e9;
-  --dot: #e0ddd3;
+  --page-ink: #f3efe6;
+  --page-muted: #b9b1c4;
+  --paper: #231e2c;
+  --dot: #3a3346;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-synthesis: none;
 }
@@ -18,7 +19,7 @@ html {
 }
 body {
   margin: 0;
-  color: var(--ink);
+  color: var(--page-ink);
   background-color: var(--paper);
   background-image: radial-gradient(var(--dot) 0.9px, transparent 0.9px);
   background-size: 1.75rem 1.75rem;
@@ -29,7 +30,7 @@ a {
   color: inherit;
 }
 a:focus-visible {
-  outline: 3px solid #594586;
+  outline: 3px solid #e9cf72;
   outline-offset: 4px;
   border-radius: 4px;
 }
@@ -62,7 +63,7 @@ h1 {
   font-weight: 680;
 }
 .name-dot {
-  color: #a3673b;
+  color: #e9cf72;
 }
 .intro p {
   max-width: 49ch;
@@ -78,7 +79,7 @@ h1 {
 .social-links a,
 footer a {
   text-decoration-thickness: 1px;
-  text-decoration-color: #9eaaa6;
+  text-decoration-color: #7d7489;
   text-underline-offset: 4px;
 }
 .social-links a:hover,
@@ -91,7 +92,7 @@ footer a:hover {
 }
 .section-label {
   margin: 0 0 0.75rem;
-  color: #5d6663;
+  color: var(--page-muted);
   font-size: 0.8rem;
   letter-spacing: 0.045em;
   font-weight: 750;
@@ -101,9 +102,26 @@ footer a:hover {
 .experience-card,
 .contact-card {
   overflow: hidden;
-  border: 1px solid rgba(45, 38, 52, 0.12);
+  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 16px;
-  box-shadow: 0 1px 2px rgba(45, 38, 52, 0.06);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.35) inset,
+    0 14px 32px rgba(8, 5, 14, 0.45),
+    0 3px 8px rgba(8, 5, 14, 0.3);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.focus-card:hover,
+.project-card:hover,
+.experience-card:hover,
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.35) inset,
+    0 20px 40px rgba(8, 5, 14, 0.55),
+    0 4px 10px rgba(8, 5, 14, 0.35);
 }
 .color-sun {
   background: #f5e7a8;
@@ -256,7 +274,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 0.4rem 1.1rem;
-  color: #5b6561;
+  color: var(--page-muted);
   font-size: 0.78rem;
 }
 
@@ -287,7 +305,17 @@ footer {
     scroll-behavior: auto;
   }
   .project-row,
-  .arrow {
+  .arrow,
+  .focus-card,
+  .project-card,
+  .experience-card,
+  .contact-card {
     transition: none;
+  }
+  .focus-card:hover,
+  .project-card:hover,
+  .experience-card:hover,
+  .contact-card:hover {
+    transform: none;
   }
 }
