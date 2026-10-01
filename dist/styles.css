@@ -99,6 +99,16 @@ footer a:hover {
   font-weight: 750;
 }
 
+.focus-card,
+.project-card,
+.experience-card,
+.writing-list,
+.contact-card {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 14px;
+  padding: 1.25rem 1.4rem;
+}
+
 .focus-spark {
   display: block;
   margin-bottom: 0.5rem;
@@ -173,6 +183,10 @@ footer a:hover {
 .project-row:first-child,
 .experience-item:first-child {
   padding-top: 0;
+}
+.project-row:last-child,
+.experience-item:last-child {
+  padding-bottom: 0;
 }
 .experience-item + .experience-item {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
@@ -251,6 +265,13 @@ footer {
 }
 
 @media (max-width: 520px) {
+  .focus-card,
+  .project-card,
+  .experience-card,
+  .writing-list,
+  .contact-card {
+    padding: 1.1rem 1.1rem;
+  }
   .page {
     width: calc(100% - 32px);
     padding-top: 2.75rem;
