@@ -54,4 +54,4 @@ export const projects = [
   },
 ];
 
-export const writing = [{ title: "KVFlow", status: "coming soon" }];
+export const writing: { title: string; status: string }[] = [];

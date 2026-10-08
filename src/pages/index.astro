@@ -86,18 +86,22 @@ import {
     </div>
   </Section>
 
-  <Section id="writing" label="WRITING" anchor>
-    <div class="writing-list">
-      {
-        writing.map((post) => (
-          <article class="writing-item">
-            <h3>{post.title}</h3>
-            <span class="writing-status">{post.status}</span>
-          </article>
-        ))
-      }
-    </div>
-  </Section>
+  {
+    writing.length > 0 && (
+      <Section id="writing" label="WRITING" anchor>
+        <div class="writing-list">
+          {
+            writing.map((post) => (
+              <article class="writing-item">
+                <h3>{post.title}</h3>
+                <span class="writing-status">{post.status}</span>
+              </article>
+            ))
+          }
+        </div>
+      </Section>
+    )
+  }
 
   <Section id="connect" label="SAY HELLO">
     <div class="contact-card">
