@@ -1,0 +1,117 @@
+---
+import Base from "../layouts/Base.astro";
+import Section from "../components/Section.astro";
+import {
+  email,
+  experience,
+  focusTags,
+  links,
+  projects,
+  writing,
+} from "../data/site";
+---
+
+<Base
+  title="Raghav Senthilkumar"
+  description="Raghav Senthilkumar is a computer science student at UW–Madison interested in distributed systems, ML systems, and high-throughput infrastructure."
+  ogDescription="Computer science at UW–Madison. Exploring distributed systems, ML systems, and high-throughput infrastructure."
+>
+  <header class="intro">
+    <h1>Raghav Senthilkumar<span class="name-dot">.</span></h1>
+    <p>
+      Computer science student at UW–Madison, interested in distributed
+      systems, ML systems, and high-throughput infrastructure.
+    </p>
+    <nav class="social-links" aria-label="Contact links">
+      {
+        links.map((link) => (
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            {link.label}
+          </a>
+        ))
+      }
+      <a href={`mailto:${email}`}>Email</a>
+    </nav>
+  </header>
+
+  <Section id="focus" label="CURRENT FOCUS">
+    <div class="focus-card">
+      <span class="focus-spark" aria-hidden="true">✳</span>
+      <p>
+        Curious about the infrastructure that makes intelligent software{" "}
+        <strong>fast, reliable, and useful.</strong>
+      </p>
+      <div class="focus-tags" aria-label="Areas of interest">
+        {focusTags.map((tag) => <span>{tag}</span>)}
+      </div>
+    </div>
+  </Section>
+
+  <Section id="experience" label="EXPERIENCE" anchor>
+    <div class="experience-card">
+      {
+        experience.map((job) => (
+          <article class="experience-item">
+            <div class="experience-head">
+              <h3>{job.org}</h3>
+              <time datetime={job.datetime}>{job.dates}</time>
+            </div>
+            <p class="experience-role">{job.role}</p>
+            <p class="experience-summary">{job.summary}</p>
+          </article>
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section id="projects" label="SELECTED PROJECTS" anchor>
+    <div class="project-card">
+      {
+        projects.map((project) => (
+          <a
+            class="project-row"
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="project-copy">
+              <strong>{project.name}</strong>
+              <small>{project.stack}</small>
+              <span>{project.summary}</span>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section id="writing" label="WRITING" anchor>
+    <div class="writing-list">
+      {
+        writing.map((post) => (
+          <article class="writing-item">
+            <h3>{post.title}</h3>
+            <span class="writing-status">{post.status}</span>
+          </article>
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section id="connect" label="SAY HELLO">
+    <div class="contact-card">
+      <p>Want to talk systems, projects, or opportunities?</p>
+      <a href={`mailto:${email}`}>{email} <span aria-hidden="true">↗</span></a>
+    </div>
+  </Section>
+
+  <footer>
+    <span>© 2026 Raghav Senthilkumar</span>
+    <a
+      href="https://github.com/raghavs6/personal-site"
+      target="_blank"
+      rel="noopener noreferrer">Site source ↗</a
+    >
+  </footer>
+</Base>
