@@ -1,8 +1,8 @@
 :root {
   color-scheme: dark;
   --ink: #2d2634;
-  --page-ink: #ffffff;
-  --page-muted: #ffffff;
+  --page-ink: #dcdcdc;
+  --page-muted: #dcdcdc;
   --paper: #0a0a0a;
   --dot: #232323;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -64,7 +64,7 @@ h1 {
   font-weight: 680;
 }
 .name-dot {
-  color: #ffffff;
+  color: var(--page-ink);
 }
 .intro p {
   max-width: 49ch;
