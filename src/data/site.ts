@@ -50,6 +50,13 @@ export const projects: {
       "Finds the cheapest GPU setup for your LLM traffic, including splitting prefill and decode across NVIDIA and AMD GPUs.",
   },
   {
+    name: "ToolScale",
+    stack: "Python · simulation",
+    href: "https://github.com/raghavs6/ToolScale",
+    summary:
+      "Research simulator testing whether live progress from agents' tools can wake sleeping inference workers before demand arrives.",
+  },
+  {
     name: "KVFlow",
     stack: "Go · gRPC · Python",
     href: "https://github.com/raghavs6/KVFlow",
