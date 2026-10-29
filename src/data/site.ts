@@ -30,7 +30,32 @@ export const experience = [
   },
 ];
 
-export const projects = [
+export const projects: {
+  name: string;
+  stack: string;
+  href?: string;
+  summary: string;
+}[] = [
+  {
+    name: "quotad",
+    stack: "Go · HTTP proxy",
+    href: "https://github.com/raghavs6/quotad",
+    summary:
+      "A rate-limit governor for AI agent fleets: one shared API budget across agents, read live from the provider's quota headers.",
+  },
+  {
+    name: "gpumix",
+    stack: "Python · vLLM",
+    summary:
+      "Finds the cheapest GPU setup for your LLM traffic, including splitting prefill and decode across NVIDIA and AMD GPUs.",
+  },
+  {
+    name: "ToolScale",
+    stack: "Python · simulation",
+    href: "https://github.com/raghavs6/ToolScale",
+    summary:
+      "Research simulator testing whether live progress from agents' tools can wake sleeping inference workers before demand arrives.",
+  },
   {
     name: "KVFlow",
     stack: "Go · gRPC · Python",
