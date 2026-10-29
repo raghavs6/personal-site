@@ -44,6 +44,12 @@ export const projects: {
       "A rate-limit governor for AI agent fleets: one shared API budget across agents, read live from the provider's quota headers.",
   },
   {
+    name: "gpumix",
+    stack: "Python · vLLM",
+    summary:
+      "Finds the cheapest GPU setup for your LLM traffic, including splitting prefill and decode across NVIDIA and AMD GPUs.",
+  },
+  {
     name: "KVFlow",
     stack: "Go · gRPC · Python",
     href: "https://github.com/raghavs6/KVFlow",
