@@ -30,7 +30,12 @@ export const experience = [
   },
 ];
 
-export const projects = [
+export const projects: {
+  name: string;
+  stack: string;
+  href?: string;
+  summary: string;
+}[] = [
   {
     name: "quotad",
     stack: "Go · HTTP proxy",

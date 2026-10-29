@@ -67,21 +67,29 @@ import {
   <Section id="projects" label="SELECTED PROJECTS" anchor>
     <div class="project-card">
       {
-        projects.map((project) => (
-          <a
-            class="project-row"
-            href={project.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        projects.map((project) => {
+          const copy = (
             <span class="project-copy">
               <strong>{project.name}</strong>
               <small>{project.stack}</small>
               <span>{project.summary}</span>
             </span>
-            <span class="arrow" aria-hidden="true">↗</span>
-          </a>
-        ))
+          );
+          // Projects whose repo is still private have no link yet.
+          return project.href ? (
+            <a
+              class="project-row"
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {copy}
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+          ) : (
+            <div class="project-row">{copy}</div>
+          );
+        })
       }
     </div>
   </Section>
