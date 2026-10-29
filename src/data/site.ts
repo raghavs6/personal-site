@@ -32,6 +32,13 @@ export const experience = [
 
 export const projects = [
   {
+    name: "quotad",
+    stack: "Go · HTTP proxy",
+    href: "https://github.com/raghavs6/quotad",
+    summary:
+      "A rate-limit governor for AI agent fleets: one shared API budget across agents, read live from the provider's quota headers.",
+  },
+  {
     name: "KVFlow",
     stack: "Go · gRPC · Python",
     href: "https://github.com/raghavs6/KVFlow",
